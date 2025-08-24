@@ -21,13 +21,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Decode File Content
-                run: |
+              run: |
                     echo "${{ inputs.data }}" | base64 --decode > ./decoded_file.txt
             - name: Display Greeting
-                run: |
+              run: |
                     echo "${{ inputs.greeting }} ${{ inputs.name }}"
             - name: Display File Content
-                run: |
+              run: |
                     echo "content of the file"
                     cat ./decoded_file.txt
             
